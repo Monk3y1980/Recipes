@@ -3,6 +3,7 @@ from .models import Recipe, Category
 
 
 class RecipesSerializer(serializers.ModelSerializer):
+    category = serializers.SlugRelatedField(slug_field='name', read_only=True)  # вывод категории по имени, а не по ID
 
     class Meta:
         model = Recipe
