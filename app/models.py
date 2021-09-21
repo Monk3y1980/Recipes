@@ -13,9 +13,10 @@ class Category(models.Model):
 
 
 class Recipe(models.Model):
+    # в category добавляю поле related_name для вывода всех рецептов категории
     name = models.CharField('название', max_length=256)
     description = models.TextField('описание', max_length=500, help_text='Не более 500 знаков')
-    category = models.ForeignKey(Category, verbose_name='категория', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, verbose_name='категория', on_delete=models.CASCADE, related_name='recipes')
     created = models.DateTimeField('добавлен', auto_now_add=True)
     image = models.ImageField('изображение', upload_to='images/items/%Y/%m/%d')
 
