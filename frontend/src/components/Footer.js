@@ -1,8 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Router } from 'react-router-dom';
+import History from './History'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Footer = () => {
     return (
+    <Router history={History}>
         <>
         <footer className="footer-section">
         <div className="container">
@@ -46,6 +49,7 @@ const Footer = () => {
 		</div>
 	</div>
     </>
+    </ Router>
     )
 }
 

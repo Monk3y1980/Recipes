@@ -1,18 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom";
-// import './App.css';
-import Footer from './Footer';
-// import {Route} from 'react-router-dom';
-import Navbar from './Navbar'
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react"
+import Footer from "./Footer"
+import Navbar from "./Navbar"
 
-function App() {
-  return (
-    <div className="App">
-        <Navbar />
-        <Footer />
-    </div>
-  );
+
+function App () {
+    return (
+            /* React.Fragment применяется для вставки не связанных элементов */
+        <div className="App">
+            <Navbar/>
+            <Footer />
+        </div>
+        )
+
 }
 
-ReactDOM.render(<App/>, document.getElementById("app"))
+export default App;

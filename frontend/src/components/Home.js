@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link, Route, Switch, Router } from "react-router-dom";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import { Link, Route, Switch } from "react-router-dom";
 import { Api } from "../api/Api";
 import Categories from "./Categories";
 import Recipe from "./RecipeDetails";
